@@ -1,4 +1,4 @@
 import './style.css';
-// import Burger from './burger.jpg';
+import createTemplate from "./template.js"
 
-console.log("Hello World");
+createTemplate();
