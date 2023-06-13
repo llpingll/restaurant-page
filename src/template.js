@@ -1,26 +1,22 @@
-export default function createTemplate() {
-    // Cache
-    const content = document.querySelector("#content");
-    // Header
-    const header = document.createElement("header");
-    const heading = document.createElement("h2");
-    const nav = document.createElement("nav");
-    // Main
-    const main = document.createElement("main");
-    const tab = document.createElement("div");
-    const tabP1 = document.createElement("p");
-    const tabP2 = document.createElement("p");
-    const chef = document.createElement("div");
-    const byP = document.createElement("p");
-    const byA1 = document.createElement("a");
-    const byA2 = document.createElement("a");
-    // Footer
-    const footer = document.createElement("footer");
-    const footerP = document.createElement("p");
-    const footerA = document.createElement("a");
-    const footerI = document.createElement("i");
+// Cache
+const content = document.querySelector("#content");
+// Header
+const header = document.createElement("header");
+const heading = document.createElement("h2");
+const nav = document.createElement("nav");
+// Main
+const main = document.createElement("main");
+const tab = document.createElement("div");
+const byP = document.createElement("p");
+const byA1 = document.createElement("a");
+const byA2 = document.createElement("a");
+// Footer
+const footer = document.createElement("footer");
+const footerP = document.createElement("p");
+const footerA = document.createElement("a");
+const footerI = document.createElement("i");
 
-
+function createTemplate() {
     // Build header
     heading.textContent = "BurgerPalace";
 
@@ -37,14 +33,8 @@ export default function createTemplate() {
 
 
     // Build main
-    tabP1.textContent = "Best burgers in town!";
-    tabP2.textContent = "Order in store or online!";
-    chef.classList.add("chef");
     tab.classList.add("tab");
 
-    tab.appendChild(tabP1);
-    tab.appendChild(chef);
-    tab.appendChild(tabP2);
     main.appendChild(tab);
     content.appendChild(main);
 
@@ -67,7 +57,7 @@ export default function createTemplate() {
     footerA.target = "_blank";
     footerI.classList.add("fa-brands");
     footerI.classList.add("fa-github");
-    footerP.textContent = `||Ping|| @ ${new Date().getFullYear()}`;
+    footerP.textContent = `||Ping|| @ ${new Date().getFullYear()} `;
     footer.classList.add("footer");
 
     footerA.appendChild(footerI);
@@ -75,3 +65,8 @@ export default function createTemplate() {
     footer.appendChild(footerP);
     content.appendChild(footer);
 }
+
+// Export seperate funcions this way
+export {
+    createTemplate,
+};
