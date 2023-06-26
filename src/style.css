@@ -8,13 +8,13 @@
 *,
 *::before,
 *::after {
-  box-sizing: border-box;
-  padding: 0;
-  margin: 0;
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
 }
 
 #content {
-    background: url("./burger.jpg");
+    background: url("./images/burger.jpg");
     background-size: cover;
     background-position: bottom right;
     height: 100vh;
@@ -48,7 +48,7 @@ nav {
     margin-top: auto;
 }
 
-nav > button {
+nav>button {
     font-size: inherit;
     padding: 20px;
     border: none;
@@ -56,8 +56,8 @@ nav > button {
     color: white;
 }
 
-nav > button:hover,
-nav > button:focus {
+nav>button:hover,
+nav>button:focus {
     box-shadow: 0 0.5em 0 -0.4em white;
     transform: translateY(-0.25em);
     transition: 400ms;
@@ -91,11 +91,56 @@ main {
     border: 1px solid rgba(0, 0, 0, 0.2);
     height: 350px;
     width: 350px;
-    background: url("./chef.jpg");
+    background: url("./images/chef.jpg");
     background-size: cover;
     border-radius: 175px;
     margin: 0 auto;
 }
+
+.menu {
+    padding: 30px;
+    display: grid;
+    gap: 40px;
+    grid-template-rows: 1fr;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+}
+
+.menu>div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    padding: 30px;
+    border: 2px solid red;
+    height: 300px;
+    cursor: pointer;
+}
+
+.menu>div :nth-child(1) {
+    border: 2px solid green;
+    height: 80%;
+    width: 80%;
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+    padding: 10px;
+}
+
+.img1 {
+    background: url("./images/burger1.png");
+}
+
+.img2 {
+    background: url("./images/burger2.png");
+}
+
+/* .menu > div :nth-child(2) {
+    border: 2px solid purple;
+    width: 100px;
+    height: 100px;
+    background: url("./burger2.png");
+    background-size: cover;
+} */
 
 #photoBy {
     margin-left: auto;

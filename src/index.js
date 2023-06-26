@@ -1,10 +1,12 @@
 import './style.css';
 import {createTemplate} from "./template.js"
-import addHomeContent from './home';
+// import addHomeContent from './home';
+import {addMenuContent} from './menu';
 
 // Load page template + Homepage content
 createTemplate();
-addHomeContent();
+// addHomeContent();
+addMenuContent();
 
 // Active page status = home
 
