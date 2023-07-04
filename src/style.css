@@ -14,10 +14,11 @@
 }
 
 #content {
+    border: 2px solid red;
     background: url("./images/burger.jpg");
     background-size: cover;
     background-position: bottom right;
-    height: 100vh;
+    height: 100%;
     text-align: center;
     color: rgb(255, 255, 255);
     display: flex;
@@ -111,7 +112,8 @@ main {
     align-items: center;
     justify-content: space-between;
     padding: 30px;
-    border: 2px solid red;
+    /* border: 2px solid red; */
+    background: rgba(0, 0, 0, 0.5);
     height: 300px;
     cursor: pointer;
 }
@@ -128,10 +130,23 @@ main {
 
 .img1 {
     background: url("./images/burger1.png");
+    /* padding: 5px; */
 }
 
 .img2 {
+    background: url("./images/cheeseburger.png");
+}
+
+.img3 {
+    background: url("./images/burger3.png");
+}
+
+.img4 {
     background: url("./images/burger2.png");
+}
+
+.img5 {
+    background: url("./images/burger4.png");
 }
 
 /* .menu > div :nth-child(2) {

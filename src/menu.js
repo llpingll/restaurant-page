@@ -58,14 +58,29 @@ function addMenuContent() {
     item1hea.textContent = "Single";
     item1img.classList.add("img1");
 
-    item2des.textContent = "Buns, double beef patty, tomato, lettuce, double-cheese";
-    item2hea.textContent = "Double";
+    item2des.textContent = "Buns, beef patty, tomato, bacon, double-cheese";
+    item2hea.textContent = "Bacon";
     item2img.classList.add("img2");
+
+    item3des.textContent = "Buns, double veg patty, tomato, lettuce, cheese";
+    item3hea.textContent = "Vegan";
+    item3img.classList.add("img3");
+
+    item4des.textContent = "Buns, double beef patty, tomato, lettuce, double-cheese";
+    item4hea.textContent = "Double";
+    item4img.classList.add("img4");
+
+    item5des.textContent = "Whole wheat buns, organic beef patty, tomato, lettuce, guacamole";
+    item5hea.textContent = "Double";
+    item5img.classList.add("img5");
 
     item1.append(item1img, item1hea, item1des);
     item2.append(item2img, item2hea, item2des);
+    item3.append(item3img, item3hea, item3des);
+    item4.append(item4img, item4hea, item4des);
+    item5.append(item5img, item5hea, item5des);
 
-    const elements = [item1, item2];
+    const elements = [item1, item2, item3, item4, item5];
     // item2, item3, item4, item5, item6, item7, item8, item9, item10
     tab.replaceChildren(...elements);
 }
