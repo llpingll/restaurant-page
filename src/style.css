@@ -80,7 +80,7 @@ main {
     background: rgba(255, 255, 255, 0.1);
 }
 
-.home {
+.Home {
     height: 600px;
     display: flex;
     flex-direction: column;
@@ -99,7 +99,8 @@ main {
     margin: 0 auto;
 }
 
-.menu {
+/* Menu */
+.Menu {
     padding: 30px;
     display: grid;
     gap: 40px;
@@ -107,7 +108,7 @@ main {
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
 }
 
-.menu>div {
+.Menu>div {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -119,7 +120,7 @@ main {
     cursor: pointer;
 }
 
-.menu>div :nth-child(1) {
+.Menu>div :nth-child(1) {
     /* border: 2px solid green; */
     min-height: 160px;
     width: 80%;
@@ -170,6 +171,22 @@ main {
 
 .img10 {
     background: url("./images/bagel.png");
+}
+
+.Contact {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    padding: 50px 0;
+}
+
+.location {
+    background: url("./images/location.png");
+    width: 600px;
+    height: 550px;
+    background-position: center;
+    background-size: cover;
+    margin: 0 auto;
 }
 
 #photoBy {

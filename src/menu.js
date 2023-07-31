@@ -1,4 +1,4 @@
-// Cache
+// Cache + create menu elements
 const item1 = document.createElement("div");
 const item1img = document.createElement("div");
 const item1hea = document.createElement("h3");
@@ -51,8 +51,9 @@ const item10des = document.createElement("p");
 
 function addMenuContent() {
     const tab = document.querySelector(".tab");
-    tab.classList.add("menu");
+    tab.classList.add("Menu");
 
+    // Populate menu items
     item1des.textContent = "Buns, beef patty, tomato, lettuce, cheese";
     item1hea.textContent = "Single";
     item1img.classList.add("img1");
@@ -93,6 +94,7 @@ function addMenuContent() {
     item10hea.textContent = "Bagel";
     item10img.classList.add("img10");
 
+    // Append to each item
     item1.append(item1img, item1hea, item1des);
     item2.append(item2img, item2hea, item2des);
     item3.append(item3img, item3hea, item3des);
@@ -104,8 +106,8 @@ function addMenuContent() {
     item9.append(item9img, item9hea, item9des);
     item10.append(item10img, item10hea, item10des);
 
+    // Replace tab content
     const elements = [item1, item2, item3, item4, item5, item6, item7, item8, item9, item10];
-    // item2, item3, item4, item5, item6, item7, item8, item9, item10
     tab.replaceChildren(...elements);
 }
 

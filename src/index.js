@@ -1,30 +1,37 @@
 import './style.css';
 import {createTemplate} from "./template.js"
-// import addHomeContent from './home';
+import addHomeContent from './home';
 import {addMenuContent} from './menu';
+import {addContactContent} from './contact';
 
 // Load page template + Homepage content
 createTemplate();
-// addHomeContent();
-addMenuContent();
+addHomeContent();
 
-// Active page status = home
+// Cache
+const tab = document.querySelector(".tab");
+const buttons = document.querySelectorAll("button");
+let activePage = "Home";
 
 // Add event listener to buttons
-    // Call Page selector function
+buttons.forEach(element => {
+    element.addEventListener("click", (e) => {
+        if (activePage !== e.target.innerHTML) {
+            tab.classList.remove(activePage);
+            activePage = e.target.innerHTML;
+            pageSelector(e.target.innerHTML);
+        }
+    });
+});
 
-// Page selector function
-    // If menu selected
-        // If active page ! menu
-            // Delete active page content and add menu content
-            // Active page status = menu
-
-    // If contact selected
-        // If active page ! contact
-            // Delete active page content and add contact content
-            // Active page status = contact
-
-    // If home selected
-        // If active page ! home
-            // Delete active page content and add contact content
-            // Active page status = home
+function pageSelector(button) {
+    if (button === "Home") {
+        addHomeContent();
+    }
+    else if (button === "Menu") {
+        addMenuContent();
+    }
+    else {
+        addContactContent();
+    }
+}
